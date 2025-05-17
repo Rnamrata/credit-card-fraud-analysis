@@ -1,6 +1,6 @@
 # credit-card-fraud-analysis
 
-The project is about predicting credit card fraud. The Online Payments Fraud Detection [https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset] dataset has been collected from Kaggle. The dataset description has been provided in Kaggle.
+The project is about predicting online payment fraud. The Online Payments Fraud Detection [https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset] dataset has been collected from Kaggle. The dataset description has been provided in Kaggle.
 
 There are seven steps of the project.
 i.   Data Preprocessing
@@ -14,7 +14,8 @@ vii. Final Result
 ## i. Data Preprocessing
 There are three key steps for data preprocessing
 
-1.  Initial Checks for Data Quality:
+1. Initial Checks for Data Quality
+
 The preprocessing begins with a data quality check where the dataset is examined for missing values and duplicate records. A custom function is implemented to compute the number of null values across all features and to count duplicated rows. This ensures that the dataset is clean and free from redundant or incomplete entries before further transformations are applied.
 
 2. Feature Scaling
@@ -24,6 +25,7 @@ To normalize the numerical features, especially those with varying units and ran
 3. Log Transformation and Scaling
 
 Certain features, specifically balance difference metrics, are log-transformed to reduce skewness and stabilize variance. Both the original and log-transformed versions (Org_balance_diff, Dest_balance_diff, Org_balance_diff_log, Dest_balance_diff_log) are selected for scaling. Prior to applying the transformations, a check ensures that these columns exist in the dataset to avoid runtime issues. This step helps in improving model performance by normalizing data and reducing the influence of extreme values.
+
 
 ## ii. Exploratory Data Analysis (EDA) 
 Exploratory Data Analysis (EDA) is the process of examining and visualizing datasets to summarize their main characteristics. The goal of EDA is to understand the structure, patterns, and anomalies in the data, helping to make informed decisions about data cleaning, feature selection, and modeling techniques. The EDA steps applied here are:
