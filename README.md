@@ -40,10 +40,14 @@ To analyze class balance, the isFraud column—which indicates whether a transac
 
 ### 3. Analyzing Categorical Features (type and type_catagory)
 
-The distribution of transaction types is examined using histograms and count plots. First, the type column, which categorizes the nature of each transaction (e.g., PAYMENT, TRANSFER), is visualized to understand its spread and frequency. Then, a separate categorical mapping column, type_catagory, is analyzed in a similar manner. These visualizations provide an understanding of user behavior and transaction trends, while also helping to identify which transaction types may be more frequently associated with fraud.
+The distribution of transaction types is examined using histograms and count plots. First, the type column, which categorizes the nature of each transaction (e.g., PAYMENT, TRANSFER), is visualized to understand its spread and frequency. Then, a separate categorical mapping column, type_catagory, is analyzed in a similar manner. These visualizations provide an understanding of user behavior and transaction trends, while also helping to identify which transaction types may be more frequently associated with fraud. A heatmap visualizes the relationship between transaction type and fraud occurrence. It shows that fraudulent activity is confined to TRANSFER and CASH_OUT transactions, with no fraud detected in PAYMENT, DEBIT, or CASH_IN types. This targeted insight helps narrow the focus for fraud detection models and investigations.
+
+The analysis shows that fraudulent transactions typically involve high amounts and originate from accounts with large balances, which are often drained completely. The destination accounts usually have low initial balances, suggesting that fraudsters use new or inactive accounts to avoid detection and maximize their gains. 
 
 ## iii. Feature Engineering
 Feature engineering is the process of creating, transforming, or selecting data features to improve the performance of machine learning models. The feature engineering is focused on creating informative, numerical features from raw transactional data to improve the accuracy and efficiency of machine learning models for fraud detection.
+
+The analysis reveals that fraudulent transactions are limited to only two types: cashout (4100 cases) and transfer (4097 cases), while the remaining types—payment, debit, and cash_in—show no instances of fraud. This suggests that fraudsters tend to target cashout and transfer methods, likely because these transaction types offer easier ways to move or withdraw funds.
 
 ### 1. Categorical Encoding
 
@@ -56,3 +60,5 @@ The dataset includes transactional balance columns such as oldbalanceOrg, newbal
 ### 3. Log Transformations
 
 To handle skewed distributions and reduce the impact of large outliers, log transformations are applied to some of the balance difference features. This helps normalize the data and makes patterns more discernible for algorithms sensitive to scale.
+
+## iv. Data Visualisation
