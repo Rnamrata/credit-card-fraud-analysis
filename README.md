@@ -3,6 +3,7 @@
 The project is about predicting online payment fraud. The Online Payments Fraud Detection [https://www.kaggle.com/datasets/rupakroy/online-payments-fraud-detection-dataset] dataset has been collected from Kaggle. The dataset description has been provided in Kaggle.
 
 There are eight steps of the project.
+
 i.    Data Preprocessing
 
 ii.   Exploratory Data Analysis (EDA) 
